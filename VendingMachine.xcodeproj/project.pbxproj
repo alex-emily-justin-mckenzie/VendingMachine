@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16CE21AD234556C000A855F5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21AC234556C000A855F5 /* main.cpp */; };
+		16CE21B52345570100A855F5 /* VendingMachineBank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21B32345570100A855F5 /* VendingMachineBank.cpp */; };
+		16CE21B82345594700A855F5 /* MoneyType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21B62345594700A855F5 /* MoneyType.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +22,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		16CE21B923459A7300A855F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		16CE21A9234556C000A855F5 /* VendingMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VendingMachine; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CE21AC234556C000A855F5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		16CE21B32345570100A855F5 /* VendingMachineBank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VendingMachineBank.cpp; sourceTree = "<group>"; };
+		16CE21B42345570100A855F5 /* VendingMachineBank.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VendingMachineBank.hpp; sourceTree = "<group>"; };
+		16CE21B62345594700A855F5 /* MoneyType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoneyType.cpp; sourceTree = "<group>"; };
+		16CE21B72345594700A855F5 /* MoneyType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MoneyType.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				16CE21AC234556C000A855F5 /* main.cpp */,
+				16CE21B62345594700A855F5 /* MoneyType.cpp */,
+				16CE21B72345594700A855F5 /* MoneyType.hpp */,
+				16CE21B32345570100A855F5 /* VendingMachineBank.cpp */,
+				16CE21B42345570100A855F5 /* VendingMachineBank.hpp */,
 			);
 			path = VendingMachine;
 			sourceTree = "<group>";
@@ -72,6 +91,7 @@
 				16CE21A5234556C000A855F5 /* Sources */,
 				16CE21A6234556C000A855F5 /* Frameworks */,
 				16CE21A7234556C000A855F5 /* CopyFiles */,
+				16CE21B923459A7300A855F5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -119,6 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				16CE21AD234556C000A855F5 /* main.cpp in Sources */,
+				16CE21B52345570100A855F5 /* VendingMachineBank.cpp in Sources */,
+				16CE21B82345594700A855F5 /* MoneyType.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

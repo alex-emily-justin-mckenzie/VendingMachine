@@ -1,0 +1,7 @@
+TenDollarBill 10 1000
+FiveDollarBill 5 1000
+OneDollarBill 1 1000
+Quarter 0.25 1000
+Dime 0.10 1000
+Nickel 0.05 1000
+Penny 0.01 1000
