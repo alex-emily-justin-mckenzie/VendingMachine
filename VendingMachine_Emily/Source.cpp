@@ -7,26 +7,18 @@ using namespace std;
 #include "Snack.h"
 
 int main() {
+	bool boolCheck = true;
 	VendingMachine machine1;
-	cout << machine1.GetBrand() << endl;
-	cout << machine1.GetFile() << endl;
-	machine1.SetFile("Myfile.txt");
-	machine1.SetBrand("Super Awesome Vending");
-	cout << machine1.GetBrand() << endl;
-	cout << machine1.GetFile() << endl;
-	machine1.SetFile("Product_Info.txt");
+	machine1.SetBrand("Roo Vending");
 	machine1.FillMachine();
 	
-	for (unsigned int i = 0; i < machine1.snacklist.size(); ++i) {
-		cout << machine1.snacklist.at(i).GetCode() << endl;
-		cout << machine1.snacklist.at(i).GetName() << endl;
-		cout << machine1.snacklist.at(i).GetPrice() << endl;
-		cout << machine1.snacklist.at(i).GetQuantity() << endl << endl;
+	while (boolCheck) { // while the user interacts with the vending machine
+		machine1.DisplayMachine();
+		int locateSnack = machine1.GetSelection(); //get desired snack from user
+		boolCheck = machine1.vendingMachineCheck(locateSnack); //interact with user for transaction
+		if (boolCheck) { // if transaction was successful
+			machine1.DecrementQty(locateSnack); // decrementation of quantity
+		}
 	}
-
-	cout << "Old quantity: " << machine1.snacklist.at(1).GetQuantity() << endl;
-	machine1.snacklist.at(1).DecrementQty();
-	cout << "New quantity: " << machine1.snacklist.at(1).GetQuantity();
-
 	return 0;
 }
