@@ -105,8 +105,9 @@ void VendingMachine::SaveMachine() {
 }
 
 void VendingMachine::DisplayMachine() const {
-	vector<Snack> displayVector(20); //Vending machine can only hold 20 snacks
-	int limit = (GetSnacklist().size() < 20) ? GetSnacklist().size() : displayVector.size();//prevent out-of-range if less than 20 snacks
+	const unsigned int MACHINE_LIMIT = 20; //Vending machine can only hold 20 snacks 
+	vector<Snack> displayVector(MACHINE_LIMIT);
+	int limit = (GetSnacklist().size() < MACHINE_LIMIT) ? GetSnacklist().size() : displayVector.size();//prevent out-of-range if less than 20 snacks
 	for (int i = 0; i < limit; ++i) {
 		displayVector.at(i) = GetSnacklist().at(i);
 	}
@@ -176,7 +177,7 @@ void VendingMachine::PrintSnackInfo(int snackLocation) {
 bool VendingMachine::GetMoney(int snackLocation, double& userMoney) {
     bool snackBought = true;
     double snackPrice = GetSnacklist().at(snackLocation).GetPrice();
-    char option;
+    char option = '\0';
     double additionalInput = 0;
 
     cout << "Please enter your money" << endl;
