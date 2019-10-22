@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16CE21B52345570100A855F5 /* VendingMachineBank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21B32345570100A855F5 /* VendingMachineBank.cpp */; };
-		16CE21B82345594700A855F5 /* MoneyType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21B62345594700A855F5 /* MoneyType.cpp */; };
-		16CE21D82350411800A855F5 /* Snack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21D52350411800A855F5 /* Snack.cpp */; };
-		16CE21D92350411800A855F5 /* VendingMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21D62350411800A855F5 /* VendingMachine.cpp */; };
-		16CE21DB235E621800A855F5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21DA235E621800A855F5 /* main.cpp */; };
+		16CE21E9235EA89500A855F5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16CE21E8235EA89500A855F5 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		16CE21A7234556C000A855F5 /* CopyFiles */ = {
+		16CE21E3235EA89500A855F5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,32 +20,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		16CE21B923459A7300A855F5 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		16CE21A9234556C000A855F5 /* VendingMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VendingMachine; sourceTree = BUILT_PRODUCTS_DIR; };
-		16CE21B32345570100A855F5 /* VendingMachineBank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VendingMachineBank.cpp; sourceTree = "<group>"; };
-		16CE21B42345570100A855F5 /* VendingMachineBank.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VendingMachineBank.hpp; sourceTree = "<group>"; };
-		16CE21B62345594700A855F5 /* MoneyType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoneyType.cpp; sourceTree = "<group>"; };
-		16CE21B72345594700A855F5 /* MoneyType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MoneyType.hpp; sourceTree = "<group>"; };
-		16CE21D22350411700A855F5 /* Snack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Snack.hpp; path = VendingMachine/Snack.hpp; sourceTree = SOURCE_ROOT; };
-		16CE21D42350411700A855F5 /* VendingMachine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VendingMachine.hpp; path = VendingMachine/VendingMachine.hpp; sourceTree = SOURCE_ROOT; };
-		16CE21D52350411800A855F5 /* Snack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Snack.cpp; path = VendingMachine/Snack.cpp; sourceTree = SOURCE_ROOT; };
-		16CE21D62350411800A855F5 /* VendingMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VendingMachine.cpp; path = VendingMachine/VendingMachine.cpp; sourceTree = SOURCE_ROOT; };
-		16CE21DA235E621800A855F5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		16CE21E5235EA89500A855F5 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CE21E8235EA89500A855F5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16CE21A6234556C000A855F5 /* Frameworks */ = {
+		16CE21E2235EA89500A855F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,107 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16CE21A0234556C000A855F5 = {
+		16CE21DC235EA89500A855F5 = {
 			isa = PBXGroup;
 			children = (
-				16CE21AB234556C000A855F5 /* VendingMachine */,
-				16CE21AA234556C000A855F5 /* Products */,
+				16CE21E7235EA89500A855F5 /* test */,
+				16CE21E6235EA89500A855F5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		16CE21AA234556C000A855F5 /* Products */ = {
+		16CE21E6235EA89500A855F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16CE21A9234556C000A855F5 /* VendingMachine */,
+				16CE21E5235EA89500A855F5 /* test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		16CE21AB234556C000A855F5 /* VendingMachine */ = {
+		16CE21E7235EA89500A855F5 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				16CE21D52350411800A855F5 /* Snack.cpp */,
-				16CE21D22350411700A855F5 /* Snack.hpp */,
-				16CE21DA235E621800A855F5 /* main.cpp */,
-				16CE21D62350411800A855F5 /* VendingMachine.cpp */,
-				16CE21D42350411700A855F5 /* VendingMachine.hpp */,
-				16CE21B62345594700A855F5 /* MoneyType.cpp */,
-				16CE21B72345594700A855F5 /* MoneyType.hpp */,
-				16CE21B32345570100A855F5 /* VendingMachineBank.cpp */,
-				16CE21B42345570100A855F5 /* VendingMachineBank.hpp */,
+				16CE21E8235EA89500A855F5 /* main.cpp */,
 			);
-			path = VendingMachine;
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16CE21A8234556C000A855F5 /* VendingMachine */ = {
+		16CE21E4235EA89500A855F5 /* test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16CE21B0234556C000A855F5 /* Build configuration list for PBXNativeTarget "VendingMachine" */;
+			buildConfigurationList = 16CE21EC235EA89500A855F5 /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
-				16CE21A5234556C000A855F5 /* Sources */,
-				16CE21A6234556C000A855F5 /* Frameworks */,
-				16CE21A7234556C000A855F5 /* CopyFiles */,
-				16CE21B923459A7300A855F5 /* CopyFiles */,
+				16CE21E1235EA89500A855F5 /* Sources */,
+				16CE21E2235EA89500A855F5 /* Frameworks */,
+				16CE21E3235EA89500A855F5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = VendingMachine;
-			productName = VendingMachine;
-			productReference = 16CE21A9234556C000A855F5 /* VendingMachine */;
+			name = test;
+			productName = test;
+			productReference = 16CE21E5235EA89500A855F5 /* test */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		16CE21A1234556C000A855F5 /* Project object */ = {
+		16CE21DD235EA89500A855F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "McKenzie Humann";
 				TargetAttributes = {
-					16CE21A8234556C000A855F5 = {
+					16CE21E4235EA89500A855F5 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 16CE21A4234556C000A855F5 /* Build configuration list for PBXProject "VendingMachine" */;
+			buildConfigurationList = 16CE21E0235EA89500A855F5 /* Build configuration list for PBXProject "test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 16CE21A0234556C000A855F5;
-			productRefGroup = 16CE21AA234556C000A855F5 /* Products */;
+			mainGroup = 16CE21DC235EA89500A855F5;
+			productRefGroup = 16CE21E6235EA89500A855F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16CE21A8234556C000A855F5 /* VendingMachine */,
+				16CE21E4235EA89500A855F5 /* test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16CE21A5234556C000A855F5 /* Sources */ = {
+		16CE21E1235EA89500A855F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16CE21D82350411800A855F5 /* Snack.cpp in Sources */,
-				16CE21B52345570100A855F5 /* VendingMachineBank.cpp in Sources */,
-				16CE21B82345594700A855F5 /* MoneyType.cpp in Sources */,
-				16CE21DB235E621800A855F5 /* main.cpp in Sources */,
-				16CE21D92350411800A855F5 /* VendingMachine.cpp in Sources */,
+				16CE21E9235EA89500A855F5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		16CE21AE234556C000A855F5 /* Debug */ = {
+		16CE21EA235EA89500A855F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		16CE21AF234556C000A855F5 /* Release */ = {
+		16CE21EB235EA89500A855F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +236,7 @@
 			};
 			name = Release;
 		};
-		16CE21B1234556C000A855F5 /* Debug */ = {
+		16CE21ED235EA89500A855F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -278,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		16CE21B2234556C000A855F5 /* Release */ = {
+		16CE21EE235EA89500A855F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -289,25 +255,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16CE21A4234556C000A855F5 /* Build configuration list for PBXProject "VendingMachine" */ = {
+		16CE21E0235EA89500A855F5 /* Build configuration list for PBXProject "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16CE21AE234556C000A855F5 /* Debug */,
-				16CE21AF234556C000A855F5 /* Release */,
+				16CE21EA235EA89500A855F5 /* Debug */,
+				16CE21EB235EA89500A855F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16CE21B0234556C000A855F5 /* Build configuration list for PBXNativeTarget "VendingMachine" */ = {
+		16CE21EC235EA89500A855F5 /* Build configuration list for PBXNativeTarget "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16CE21B1234556C000A855F5 /* Debug */,
-				16CE21B2234556C000A855F5 /* Release */,
+				16CE21ED235EA89500A855F5 /* Debug */,
+				16CE21EE235EA89500A855F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 16CE21A1234556C000A855F5 /* Project object */;
+	rootObject = 16CE21DD235EA89500A855F5 /* Project object */;
 }

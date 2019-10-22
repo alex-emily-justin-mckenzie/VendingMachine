@@ -20,8 +20,9 @@ private:
     
 public:
     void LoadBank();
-    void MakeChange(double inputMoney, double totalCost);
+    bool MakeChange(double inputMoney, double totalCost);
     void CheckBank();
+    void SaveBank();
 };
 
 #endif /* MVendingMachineBank_hpp */

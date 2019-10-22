@@ -5,15 +5,21 @@
 #include <iostream>
 using namespace std;
 
-#include "VendingMachine.h"
+#include "VendingMachine.hpp"
+#include "VendingMachineBank.hpp"
+
 
 VendingMachine::VendingMachine(string brandName, string fileName) {
 	brand = brandName;
 	file = fileName;
 }
+
 void VendingMachine::SetBrand(string brandName) { brand = brandName; }
+
 void VendingMachine::SetFile(string fileName) { file = fileName; }
+
 void VendingMachine::DecrementQty(int snackLocation) { snacklist.at(snackLocation).DecrementQty(); }
+
 int VendingMachine::GetSelection() const {
 	string userInput;
 	bool foundSnack = false;
@@ -34,19 +40,25 @@ int VendingMachine::GetSelection() const {
 	}
 	return location;
 }
+
 string VendingMachine::GetBrand() const { return brand; }
+
 string VendingMachine::GetFile() const { return file; }
+
 vector<Snack> VendingMachine::GetSnacklist() const { return snacklist; }
+
 string VendingMachine::getString(char x) {
 	string s(1, x);
 	return s;
 }
+
 string VendingMachine::createCode(char myChar, int myNum) {
 	string myCharStr = getString(myChar); //eg "A"
 	string myNumStr = to_string(myNum); //eg "1"
 	string myCode = myCharStr + myNumStr; //eg "A1"
 	return myCode;
 }
+
 void VendingMachine::FillMachine() {
 	ifstream inFS;
 	string name, code;
@@ -74,6 +86,7 @@ void VendingMachine::FillMachine() {
 	}
 	inFS.close();
 }
+
 void VendingMachine::DisplayMachine() const {
 	vector<Snack> displayVector(20); //Vending machine can only hold 20 snacks
 	int limit = (GetSnacklist().size() < 20) ? GetSnacklist().size() : displayVector.size();//prevent out-of-range if less than 20 snacks
@@ -125,9 +138,19 @@ void VendingMachine::DisplayMachine() const {
 	cout << "'-------------------'" << endl;
 	cout << " ||               || " << endl << endl;
 }
+
 // returns true or false if successful transaction or not
 bool VendingMachine::vendingMachineCheck(int snackLocation) {
 	double doubleVariable, doubleBalance = 0.0;
+    double totalCost = 10;
+    double inputAmount = 9;
+    char option;
+    
+    VendingMachineBank vendingBank;
+    vendingBank.LoadBank(); // only need to do once at the beginning
+    // vendingBank.CheckBank();
+
+    
 	while (true) {
 		cout << fixed << setprecision(2);
 		cout << "\nBalance : $" << doubleBalance << endl;
@@ -145,14 +168,30 @@ bool VendingMachine::vendingMachineCheck(int snackLocation) {
 		}
 		if (doubleVariable == 0) { cout << "\nHave a nice day!\n";  return false; }
 		doubleBalance += doubleVariable;
-		if (doubleBalance >= GetSnacklist().at(snackLocation).GetPrice()) {
-			if (doubleBalance - GetSnacklist().at(snackLocation).GetPrice() > 0) {
-				cout << "\nChange due : $" << doubleBalance - GetSnacklist().at(snackLocation).GetPrice();
-			}
-			cout << "\nEnjoy your " << GetSnacklist().at(snackLocation).GetName() << "!\n\n";
-			return true;
-		}
-		else { cout << "\nInsufficient funds. You need $" << GetSnacklist().at(snackLocation).GetPrice() - doubleBalance 
-				    << " more."; }
-	}
+
+        while (GetSnacklist().at(snackLocation).GetPrice() > doubleBalance) {
+            double additionalInput = 0;
+                
+            do {
+                cout << "You have not entered enough money to buy your item." << endl;
+                cout << "Hit q to cancel the transaction or any other key to continue." << endl;
+                cin >> option;
+                option = tolower(option);
+                if (option != 'q') {
+                    cout << "Please enter additional money to be added to your total input"<< endl;
+                    cin >> additionalInput;
+                    inputAmount += additionalInput;
+                }
+                else {
+                    abort();
+                }
+                    
+            } while (option != 'q' && totalCost > inputAmount);
+    
+            // input totalCost, inputAmount
+            vendingBank.MakeChange(totalCost, inputAmount);
+            
+            return true;
+        }
+    }
 }

@@ -45,6 +45,7 @@ void VendingMachineBank::LoadBank() {
         cout << "Unable to open file";
     }
     
+    startBank.close();
     bank = newBank;
 }
 
@@ -55,24 +56,26 @@ void VendingMachineBank::CheckBank() {
     }
 }
 
-void VendingMachineBank::MakeChange(double inputMoney, double totalCost) {
+bool VendingMachineBank::MakeChange(double inputMoney, double totalCost) {
     // will check that inputMoney is greater or equal to totalCost in other function
     bool changePossible = true;
     double change;
     double remainingChange;
     vector<int> moneyChange;
     
-    change = totalCost - inputMoney;
+    change = inputMoney - totalCost;
     remainingChange = change;
     
-    for (int i = 0; i < bank.size(); ++i) {
-        int tempCount;
-        tempCount = floor(remainingChange / bank.at(i).GetValue());
+    for (int i = 0; i < bank.size() - 1; ++i) {
+        int tempCount = floor(remainingChange / bank.at(i).GetValue());
         moneyChange.push_back(bank.at(i).SubtractCount(tempCount));
-        remainingChange -= moneyChange.at(i) * bank.at(i).GetValue();
+        remainingChange = remainingChange - (moneyChange.at(i) * bank.at(i).GetValue());
     }
+    int finCount = ceil(remainingChange / bank.at(bank.size() - 1).GetValue());
+    moneyChange.push_back(bank.at(bank.size() - 1).SubtractCount(finCount));
+    remainingChange = remainingChange - (moneyChange.at(moneyChange.size() - 1) * bank.at(bank.size() - 1).GetValue());
     
-    if (remainingChange > 0.01) {
+    if (remainingChange >= 0.01) {
         changePossible = false;
         cout << "Sorry, there is not enough money in the vending machine to make your change." << endl;
     }
@@ -92,6 +95,27 @@ void VendingMachineBank::MakeChange(double inputMoney, double totalCost) {
         }
 
     }
+    return changePossible;
+
+}
+
+void VendingMachineBank::SaveBank() {
+    ofstream endBank;
+    endBank.open("VendingMachineStartingBank.txt", ios::out | ios::trunc);
+
+    for (int i = 0; i < bank.size() - 1; ++i) {
+        
+        endBank << bank.at(i).GetName() << " ";
+        endBank << bank.at(i).GetValue() << " ";
+        endBank << bank.at(i).GetCount() << endl;
+        
+    }
+    
+    endBank << bank.at(bank.size() - 1).GetName() << " ";
+    endBank << bank.at(bank.size() - 1).GetValue() << " ";
+    endBank << bank.at(bank.size() - 1).GetCount();
+    
+    endBank.close();
 
 }
 

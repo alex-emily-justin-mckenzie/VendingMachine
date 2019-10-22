@@ -3,14 +3,16 @@
 #include <vector>
 using namespace std;
 
-#include "VendingMachine.h"
-#include "Snack.h"
+#include "VendingMachine.hpp"
+#include "Snack.hpp"
+#include "VendingMachineBank.hpp"
 
 int main() {
 	bool boolCheck = true;
 	VendingMachine machine1;
 	machine1.SetBrand("Roo Vending");
 	machine1.FillMachine();
+
 	
 	while (boolCheck) { // while the user interacts with the vending machine
 		machine1.DisplayMachine();

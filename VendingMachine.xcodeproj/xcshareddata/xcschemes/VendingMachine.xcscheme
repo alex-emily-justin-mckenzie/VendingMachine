@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/scooterrocks9/Documents/CS201/VendingMachine"
+      customWorkingDirectory = "/Users/scooterrocks9/Documents/CS201/VendingMachine/VendingMachine"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

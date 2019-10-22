@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-#include "Snack.h"
+#include "Snack.hpp"
 
 Snack::Snack(string itemName, string itemCode, double itemPrice, int itemQuantity) {
 	name = itemName;

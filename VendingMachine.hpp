@@ -1,7 +1,7 @@
 #ifndef VENDINGMACHINE_H
 #define VENDINGMACHINE_H
 
-#include "Snack.h"
+#include "Snack.hpp"
 
 class VendingMachine {
 public:

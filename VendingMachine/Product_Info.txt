@@ -1,0 +1,18 @@
+Snickers	1.25 3
+Doritos	2.50 9
+M&M's	0.88 8
+Cheetos	2.23 7
+Cheez-Its	3.00 6
+Twix	1.00 5
+Pop-Tarts	3.35 4
+Rice Krispies	1.76 3
+Popcorn	1.42 4
+Pringles	2.26 8
+Frito's	0.98 6
+Chips Ahoy	1.49 4
+Skittles	1.28 10
+Pepsi	2.48 8
+Dr. Pepper	3.05 4
+Sprite	2.56 7
+Mountain Dew	4.21 5
+Red Bull	4.21 7
