@@ -3,6 +3,7 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
+#include <limits>
 using namespace std;
 
 #include "VendingMachine.hpp"
